@@ -1,11 +1,11 @@
-# [NMRiH] No Checkpoint Respawning
-Disables respawning at checkpoints, similar to realism mode
+Installation:
+- Move the contents of this .zip to addons/sourcemod
+- Refresh your plugins list via `sm plugins refresh`
 
-## Installation
-- Grab the latest zip in [releases](https://github.com/dysphie/nmrih-no-checkpoint-respawning/releases)
-- Extract in `addons/sourcemod`
-- Refresh your plugin list `sm plugins refresh`
+ConVars:
+- sm_allow_nmo_respawns - 1/0 (Default: 0) - Toggles respawning in objective mode
+- sm_allow_nms_respawns - 1/0 (Default: 0) - Toggles respawning in survival mode
 
-## CVars
+ConVars should be edited in cfg/sourcemod/norespawn.cfg
 
-- `sm_allow_checkpoint_respawning` `0/1` - Toggles checkpoint respawning on or off
+Source code is under the GPLv3 license, as per https://www.sourcemod.net/license.php

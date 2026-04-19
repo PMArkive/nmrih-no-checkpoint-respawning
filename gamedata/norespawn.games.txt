@@ -4,23 +4,88 @@
 	{
 		"Signatures"
 		{
+			"CNMRiH_WaveGameRules::FPlayerCanRespawn"
+			{
+				"library"	"server"
+				"windows"	"\x55\x8B\xEC\x57\x8B\xF9\x8B\x0D\x2A\x2A\x2A\x2A\x85\xC9\x74\x2A\xFF\xB1\xA4\x03\x00\x00"
+				"linux"		"@_ZN20CNMRiH_WaveGameRules17FPlayerCanRespawnEP11CBasePlayer"
+			}
+
+			"COverlord_Wave_Controller::SpawnNewPlayers"
+			{
+				"library"	"server"
+				"windows"	"\xA1\x2A\x2A\x2A\x2A\x57\xBF\x01\x00\x00\x00\x39\x78\x14\x7C\x2A\x56\x57\xE8\x2A\x2A\x2A\x2A\x8B\xF0\x83\xC4\x04\x85\xF6\x74\x2A\x8B\x06\x8B\xCE\x8B\x80\x4C\x01\x00\x00\xFF\xD0\x84\xC0\x74\x2A\x80\xBE\x2C\x13\x00\x00\x00\x74\x2A\x80\xBE\xB5\x13\x00\x00\x00"
+				"linux"		"@_ZN25COverlord_Wave_Controller15SpawnNewPlayersEv"
+			}
+
 			"CNMRiH_GameRules::RespawnDeadPlayers"
 			{
 				"library"		"server"
-				"windows"		"\xA1\x2A\x2A\x2A\x2A\x83\x78\x30\x00\x74\x2A\xA1\x2A\x2A\x2A\x2A\x83\x78\x30\x00\x0F\x84"
+				"windows"		"\x55\x8B\xEC\x80\x7D\x08\x00\x75\x2A\xA1\x2A\x2A\x2A\x2A\x83\x78\x30\x00\x74"
 				"linux"			"@_ZN16CNMRiH_GameRules14RespawnPlayersEv"
+			}
+
+			"CNMRiH_WaveGameRules::CouldJoinServerAndSpawn"
+			{
+				"library"	"server"
+				"windows"	"\x55\x8B\xEC\x51\xA1\x2A\x2A\x2A\x2A\x56\x8B\xF1\x8B\x0D\x2A\x2A\x2A\x2A\xD9"
+				"linux"		"@_ZNK20CNMRiH_WaveGameRules23CouldJoinServerAndSpawnEv"
 			}
 		}
 
 		"Functions"
-		{
-			"CNMRiH_GameRules::RespawnDeadPlayers"
-			{
-				"signature"  "CNMRiH_GameRules::RespawnDeadPlayers"
-				"callconv"  "thiscall"
-				"return"  "void"
-				"this"  "ignore"
-			}
-		}
+        {
+			"CNMRiH_WaveGameRules::FPlayerCanRespawn"
+            {
+                "signature"  "CNMRiH_WaveGameRules::FPlayerCanRespawn"
+                "callconv"  "thiscall"
+                "return"  "bool"
+                "this"  "ignore"
+				"arguments"
+                {
+                    "pPlayer"
+                    {
+                        "type"  "cbaseentity"
+                    }
+                }
+            }
+
+			"CNMRiH_WaveGameRules::CouldJoinServerAndSpawn"
+            {
+                "signature"  "CNMRiH_WaveGameRules::CouldJoinServerAndSpawn"
+                "callconv"  "thiscall"
+                "return"  "bool"
+                "this"  "ignore"
+				"arguments"
+                {
+                }
+            }
+
+			"COverlord_Wave_Controller::SpawnNewPlayers"
+            {
+                "signature"  "COverlord_Wave_Controller::SpawnNewPlayers"
+                "callconv"  "cdecl"
+                "return"  "void"
+                "this"  "ignore"
+				"arguments"
+                {
+                }
+            }
+
+            "CNMRiH_GameRules::RespawnDeadPlayers"
+            {
+                "signature"  "CNMRiH_GameRules::RespawnDeadPlayers"
+                "callconv"  "cdecl"
+                "return"  "void"
+                "this"  "ignore"
+				"arguments"
+                {
+                    "force"
+                    {
+                        "type"  "bool"
+                    }
+                }
+            }
+        }
 	}
 }
